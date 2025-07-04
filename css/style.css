@@ -1,0 +1,12 @@
+@import url(./reset.css);
+@import url(./global.css);
+@import url(./variables.css);
+
+@import url(./header.css);
+@import url(./footer.css);
+
+@import url(./sections/hero.css);
+@import url(./sections/services.css);
+@import url(./sections/highlights.css);
+
+@import url(./responsive.css);

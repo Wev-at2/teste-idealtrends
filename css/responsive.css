@@ -1,0 +1,188 @@
+@media screen and (min-width: 992px) {
+    #btn-mobile {
+        display: none;
+    }
+
+    .wc-header__menu--nav #btn-mobile:is(:hover) {
+        transform: rotate(360deg);
+        transform: scale(1.5);
+        transition: all 0.4s ease;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header-nav {
+        padding: 1rem 0;
+    }
+
+    .header-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top: 130px;
+        right: 0;
+        z-index: 1000;
+        transition: var(--transition-1s);
+        background: rgba(2, 0, 48, 0.8);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5);
+        -webkit-backdrop-filter: blur(13px);
+        -moz-backdrop-filter: blur(13px);
+        -ms-backdrop-filter: blur(13px);
+        -o-backdrop-filter: blur(13px);
+        backdrop-filter: blur(13px);
+
+        visibility: hidden;
+        overflow-y: hidden;
+        pointer-events: none;
+    }
+
+    .header-menu .header-menu__item {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .header-menu .header-menu__link {
+        width: 100%;
+        padding: 2rem 0;
+        display: block;
+        font-size: var(--font-size-base);
+        color: var(--main-bg-color);
+    }
+
+    .header-menu .header-menu__link::after {
+        left: 30%;
+    }
+
+    .header-menu .header-menu__link:is(:hover, :focus)::after {
+        width: 40%;
+    }
+
+    .header-nav #btn-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        font-size: 0;
+        outline: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+
+    .header-nav.active #btn-mobile:focus {
+        transform: skew(0deg, 0deg);
+    }
+
+    .header-nav #hamburguer {
+        display: block;
+        border-top: solid 2px var(--primary-color);
+        width: 20px;
+        transition: 0.4s;
+        margin: 1rem;
+    }
+
+    .header-nav #hamburguer::before,
+    .header-nav #hamburguer::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+        background: var(--primary-color);
+        position: relative;
+        transition: 0.4s;
+    }
+
+    .header-nav.active .header-menu {
+        visibility: visible;
+        overflow-y: auto;
+        pointer-events: all;
+        height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .header-nav.active #hamburguer {
+        border-top: transparent;
+        transform: rotate(1350deg);
+    }
+
+    .header-nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    .header-nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer__container {
+        padding: 1rem;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer__copyright {
+        font-size: var(--font-size-small);
+    }
+
+    .hero__content {
+        background-color: transparent;
+        width: 80%;
+    }
+
+    .hero__img {
+        height: 540px;
+    }
+
+    .hero__image {
+        padding-top: 1rem;
+    }
+
+    .services__content {
+        flex-direction: column;
+        gap: 2rem;
+        background-color: transparent;
+    }
+
+    .services__image {
+        margin-top: 1rem;
+    }
+
+    .highlights {
+        padding: 2rem 0 1rem 0;
+    }
+
+    .highlights__grid {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .highlights__title {
+        padding: 0 5%;
+    }
+
+    .services__container {
+        width: 90%;
+    }
+}
